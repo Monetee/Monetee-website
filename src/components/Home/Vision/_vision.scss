@@ -1,0 +1,151 @@
+///* vision */
+///***********************************************/
+.vision {
+  $self: &;
+
+  &__row {
+    display: flex;
+    margin-bottom: 100px;
+    flex-direction: column;
+    @include mq(lg) {
+      flex-direction: row;
+    }
+    @include mq(xl) {
+      margin-bottom: 180px;
+    }
+  }
+
+  &__decision {
+    margin-bottom: 40px;
+    @include mq(lg) {
+      margin-bottom: 0;
+      @include col(13, 2, 110px);
+    }
+
+    &-decor {
+      position: relative;
+      height: em(788);
+      font-size: 10px;
+      @include mq(md) {
+        font-size: 12px;
+      }
+      @include mq(lg) {
+        font-size: 16px;
+      }
+      &-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: em(770);
+        height: em(788);
+        z-index: 1;
+      }
+
+      &-img2 {
+        position: absolute;
+        top: em(-620);
+        right: em(-100);
+        width: em(1469);
+        height: em(1497);
+      }
+    }
+
+    &-note {
+      font-family: $fontsStyle;
+      font-size: 36px;
+      font-weight: bold;
+      font-style: italic;
+      line-height: 1.2;
+      color: #0b063e;
+      margin-bottom: 50px;
+      position: relative;
+      z-index: 10;
+      @include mq(md) {
+        font-size: 40px;
+      }
+      @include mq(lg) {
+        font-size: 46px;
+        margin-bottom: 150px;
+      }
+      @include mq(xl) {
+        font-size: 56px;
+        margin-bottom: 150px;
+      }
+    }
+
+  }
+
+  &__employer {
+    border-top: 1px solid #d5d8e2;
+    padding-top: 30px;
+
+    @include mq(lg) {
+      @include col(11, 2, 110px);
+      padding-top: 50px;
+    }
+
+    &-title {
+      font-family: $fontsStyle;
+      font-size: em(36px);
+      font-weight: bold;
+      line-height: 1.31;
+      color: #1e2540;
+      margin: em(0 0 30 0, 36);
+    }
+
+
+    &-calendar {
+      background-color: #7751e2;
+      padding: em(0 30px 80 30px);
+      border-radius: 6px;
+      margin-bottom: 100px;
+      position: relative;
+      overflow: hidden;
+      &:before {
+        display: block;
+        content: '';
+        padding-top: 100%;
+      }
+      @include mq(xl) {
+        padding: em(0 66px 80 66px);
+      }
+
+      &-decor {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+
+      &-decor2 {
+        position: absolute;
+        display: block;
+        bottom: 0;
+        right: 0;
+        width: em(164);
+        height: em(156);
+        font-size: 12px;
+        @include mq(xl) {
+          font-size: 16px;
+        }
+      }
+      &-title {
+        font-family: $fontsStyle;
+        font-size: em(36px);
+        font-weight: bold;
+        line-height: 1.31;
+        color: #fff;
+        margin: 0 0 1em 0;
+        z-index: 10;
+        position: relative;
+      }
+
+      &-info {
+        color: #fff;
+        font-size: 19px;
+        line-height: 1.63;
+      }
+    }
+  }
+}

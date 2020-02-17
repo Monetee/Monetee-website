@@ -1,0 +1,117 @@
+
+@font-face {
+  font-family: 'Campton';
+  src: url('../fonts/Campton-Bold.woff2') format('woff2'),
+  url('../fonts/Campton-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Campton';
+  src: url('../fonts/Campton-SemiBold.woff2') format('woff2'),
+  url('../fonts/Campton-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Campton';
+  src: url('../fonts/Campton-Book.woff2') format('woff2'),
+  url('../fonts/Campton-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Electronica';
+  src: url('../fonts/ElectronicaBoldItalic.woff2') format('woff2'),
+  url('../fonts/ElectronicaBoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Electronica';
+  src: url('../fonts/ElectronicaBold.woff2') format('woff2'),
+  url('../fonts/ElectronicaBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.4;
+  font-size: 1.6rem;
+  font-family: Campton, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+h4 {
+  font-size: em(13px);
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 2.81px;
+  color: #939cb8;
+  text-transform: uppercase;
+  margin:em(0 0 26px 0, 13);
+}
+
+.hidden {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+// mobile menu
+.bm-menu-wrap {
+  background-color: #fff;
+}
+.bm-item-list {
+  padding: 30px;
+}
+.bm-burger-button {
+  display: none;
+}
+.bm-cross-button {
+  width: 30px;
+  height: 30px;
+  .bm-cross {
+    background-color: #000;
+    width: 1px !important;
+  }
+}
+.mobile-menu {
+  &__item {
+    font-size: 22px;
+    margin-top: 10px;
+    outline: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    outline: none;
+  }
+}

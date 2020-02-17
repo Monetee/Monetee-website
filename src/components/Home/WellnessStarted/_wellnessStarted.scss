@@ -1,0 +1,102 @@
+///* wellness */
+///***********************************************/
+.wellness {
+  $self: &;
+  padding: 0 15px;
+  margin-bottom: -220px;
+
+  @include mq(lg) {
+    padding: 0 25px;
+  }
+
+  &__box {
+    background-color: #7752e8;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 120px 0;
+    min-height: 440px;
+    position: relative;
+    max-width: 1650px;
+    margin: 0 auto;
+
+    .container {
+      position: relative;
+      z-index: 10;
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      background-size: contain;
+      background-repeat: no-repeat;
+      font-size: 6px;
+      @include mq(md) {
+        font-size: 8px;
+      }
+      @include mq(lg) {
+        font-size: 12px;
+      }
+      @include mq(xxl) {
+        font-size: 16px;
+      }
+    }
+
+    &:before {
+      background-image: url("../../../images/decor3.png");
+      width: em(492);
+      height: em(398);
+      top: 0;
+      left: 0;
+    }
+
+    &:after {
+      background-image: url("../../../images/decor2.png");
+      width: em(209);
+      height: em(315);
+      right: 0;
+      bottom: 10px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    color: #fff;
+    font-family: $fontsStyle;
+    font-size: em(32px);
+    font-weight: bold;
+    margin: em(0 0 12 0, 44);
+    @include mq(md) {
+      font-size: em(38px);
+    }
+    @include mq(lg) {
+      font-size: em(44px);
+    }
+  }
+
+  &__note {
+    font-size: 19px;
+    line-height: 1.53;
+    text-align: center;
+    color: #fff;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 532px;
+    margin: 20px auto;
+    font-size: 13px;
+    @include mq(md) {
+      font-size: 14px;
+    }
+    @include mq(lg) {
+      font-size: 16px;
+    }
+
+    .wellness-form__box .ui-input {
+      padding-right: em(200);
+    }
+  }
+}

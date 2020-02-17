@@ -1,0 +1,105 @@
+///* footer */
+///***********************************************/
+.footer {
+  $self: &;
+
+  background-color: #0b063e;
+  padding-top: 240px;
+
+  @include mq(md) {
+    padding-top: 290px;
+
+  }
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    @include mq(md) {
+      padding-bottom: 76px;
+    }
+  }
+
+  &__logo {
+    width: 100%;
+    margin-bottom: 15px;
+    line-height: 1;
+    @include mq(md) {
+      width: auto;
+      margin-bottom: 0;
+    }
+
+    &-link {
+      vertical-align: middle;
+      display: inline-block;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+  }
+
+  &__menu {
+    &-list {
+      list-style: none;
+      margin: -10px 0 0 -74px;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      align-self: start;
+      @include mq(md) {
+        margin: 10px 0 0 -74px;
+      }
+    }
+
+    &-item {
+      margin: 10px 0 0 74px;
+      padding: 0;
+      position: relative;
+      color: #fff;
+      font-size: 14px;
+      @include mq(md) {
+        margin: 0 0 0 74px;
+      }
+    }
+
+    &-link {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  &__main {
+    padding: 30px 0;
+    border: solid 1px #1f186e;
+
+    &-box {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__copy {
+    font-size: 14px;
+    color: #b8b1ff;
+
+    a {
+      color: #dfdbff;
+      text-decoration: none;
+    }
+  }
+
+  &__creater {
+    font-size: 14px;
+    color: #b8b1ff;
+    text-align: right;
+    @include mq(md) {
+      text-align: left;
+    }
+
+    a {
+      color: #dedbfe;
+      text-decoration: none;
+    }
+  }
+}

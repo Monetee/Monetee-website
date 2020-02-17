@@ -1,0 +1,72 @@
+///* steps */
+///***********************************************/
+.steps {
+  $self: &;
+  padding: 95px 0 80px 0;
+
+  @include mq(md) {
+    padding: 130px 0 110px 0;
+  }
+
+  @include mq(lg) {
+    padding: 190px 0 170px 0;
+  }
+
+
+
+  &__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    @include mq(md) {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    margin: 40px 0 0 0;
+    position: relative;
+    padding-top: 20px;
+    &:first-child {
+      margin-top: 0;
+    }
+
+    @include mq(md) {
+      @include col(8, 3);
+      margin: 0;
+    }
+
+    &-num {
+      font-family: $fontsStyle;
+      font-size: 52px;
+      font-weight: bold;
+      color: #ffe9f5;
+      position: absolute;
+      top: 0;
+      line-height: 1;
+      left: 0;
+      z-index: -1;
+    }
+
+    &-title {
+      font-family: $fontsStyle;
+      font-size: em(28px);
+      font-weight: bold;
+      color: #1e2540;
+      margin: em(0 0 20 0, 28);
+    }
+
+    &-note {
+      font-size: 17px;
+      line-height: 1.59;
+      color: #515c81;
+      a {
+        color: #533dc6;
+      }
+    }
+  }
+
+
+}

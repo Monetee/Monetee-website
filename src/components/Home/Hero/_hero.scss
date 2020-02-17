@@ -1,0 +1,148 @@
+///* Hero */
+///***********************************************/
+.hero {
+  $self: &;
+  position: relative;
+  margin-bottom: 100px;
+
+  @include mq(xl) {
+    margin-bottom: em(190);
+  }
+
+  &__box {
+    display: flex;
+
+    &-main {
+      padding-top: 45px;
+      position: relative;
+      z-index: 1;
+      @include mq(md) {
+        width: 60%;
+      }
+      @include mq(xl) {
+        padding-top: 200px;
+        width: 645px;
+        flex-shrink: 0;
+      }
+    }
+
+    &-decor {
+      position: relative;
+      flex-grow: 1;
+      min-height: em(897px);
+      display: none;
+      font-size: 10px;
+      @include mq(md) {
+        display: block;
+      }
+      @include mq(lg) {
+        font-size: 13px;
+      }
+      @include mq(xl) {
+        font-size: 16px;
+      }
+
+      img {
+        position: absolute;
+        left: em(-80px);
+        @include mq(lg) {
+          left: em(-210px);
+        }
+        top: -100px;
+        z-index: -1;
+        width: em(1053);
+        height: em(997);
+      }
+    }
+  }
+
+  &__title {
+    font-family: $fontsStyle;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.13;
+    color: #0b063e;
+    margin: em(0 0 52 0, 56);
+
+    @include mq(lg) {
+      font-size: 46px;
+    }
+
+    @include mq(xl) {
+      font-size: 56px;
+    }
+
+    b {
+      display: inline-block;
+      white-space: nowrap;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 0.2em;
+        height: em(18, 56);
+        left: -0.1em;
+        right: -0.1em;
+        background-color: #00c6c8;
+        z-index: -1;
+      }
+    }
+  }
+
+  &__note {
+    font-size: em(17px);
+    line-height: 1.65;
+    color: #4a4860;
+    margin-bottom: em(58, 17);
+    @include mq(md) {
+      max-width: 320px;
+    }
+    @include mq(lg) {
+      max-width: 420px;
+    }
+  }
+
+  &__wellness {
+    &-title {
+      font-family: $fontsStyle;
+      font-size: 19px;
+      font-weight: bold;
+      color: #0b063e;
+      line-height: 1;
+
+      b {
+        color: #533dc6;
+      }
+    }
+
+    &-form {
+      max-width: 370px;
+      font-size: 14px;
+
+      .wellness-form__box .ui-input {
+        padding-right: em(120px);
+      }
+
+      @include mq(lg) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  //&__decor {
+  //  position: absolute;
+  //  right: 0;
+  //  top: 0;
+  //  z-index: -1;
+  //  bottom: 0;
+  //  left: 600px;
+  //  img {
+  //    width: em(1053);
+  //    height: em(997);
+  //    position: absolute;
+  //    top: -100px;
+  //    left: 0;
+  //  }
+  //}
+}

@@ -1,0 +1,54 @@
+{
+  "name": "monetee",
+  "private": true,
+  "description": "Monetee gatsby site",
+  "version": "0.1.0",
+  "author": "Aleksandr Zidyganov <alex@csscoder.pro>",
+  "dependencies": {
+    "formik": "2.1.4",
+    "gatsby": "2.19.7",
+    "gatsby-plugin-manifest": "2.2.39",
+    "gatsby-plugin-offline": "3.0.32",
+    "gatsby-plugin-react-helmet": "3.1.21",
+    "gatsby-plugin-sass": "2.1.28",
+    "gatsby-source-filesystem": "2.1.46",
+    "node-sass": "4.13.1",
+    "prop-types": "15.7.2",
+    "react": "16.12.0",
+    "react-burger-menu": "2.6.13",
+    "react-dom": "16.12.0",
+    "react-hamburger-menu": "1.1.1",
+    "react-helmet": "5.2.1",
+    "react-responsive": "8.0.3",
+    "react-scroll": "1.7.16",
+    "react-sticky-header": "0.2.0",
+    "react-transition-group": "4.3.0",
+    "yup": "0.28.1"
+  },
+  "devDependencies": {
+    "gatsby-plugin-sass-resources": "2.0.0",
+    "gatsby-plugin-webpack-bundle-analyser-v2": "1.1.8",
+    "prettier": "1.19.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "engines": {
+    "node": "=13.5.0 <=13.8.0"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "dev": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/csscoderRU/monetee"
+  }
+}

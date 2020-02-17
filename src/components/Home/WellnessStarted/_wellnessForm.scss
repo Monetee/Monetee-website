@@ -1,0 +1,16 @@
+///* wellness-form */
+///***********************************************/
+.wellness-form {
+  $self: &;
+
+  &__box {
+    position: relative;
+
+    .ui-btn {
+      position: absolute;
+      right: -1px;
+      top: 0;
+    }
+  }
+}
+

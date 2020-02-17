@@ -1,0 +1,69 @@
+///* form */
+///***********************************************/
+.form {
+  position: relative;
+
+  &__fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  &__row {
+    margin-top: em(26px);
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &--big {
+      margin-top: em(40px);
+    }
+
+    &--line {
+      display: flex;
+    }
+
+
+    &-col-input {
+      flex-grow: 1;
+    }
+
+    &-col-button {
+      flex-shrink: 0;
+      margin-left: 15px;
+      .ui-btn {
+        min-width: 300px;
+      }
+    }
+
+  }
+
+  &__field {
+    position: relative;
+
+    &-control {
+      position: relative;
+    }
+
+    &-messages {
+      position: absolute;
+      top: 100%;
+      left: em(40);
+      display: flex;
+      padding-top: .5em;
+
+      &-item {
+        color: #ff5fba;
+        font-size: 11px;
+        line-height: 1;
+      }
+    }
+
+  }
+
+}
+
+legend + .form__row {
+  margin-top: 0;
+}

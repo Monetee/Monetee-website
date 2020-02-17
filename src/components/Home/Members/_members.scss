@@ -1,0 +1,178 @@
+///* members */
+///***********************************************/
+.members {
+  $self: &;
+
+  &__box {
+    display: flex;
+    margin-bottom: 80px;
+
+    @include mq(md) {
+      margin-bottom: 100px;
+    }
+
+    @include mq(lg) {
+      margin-bottom: 124px;
+    }
+
+    &-info {
+      margin-right: 30px;
+      padding-top: 60px;
+      border-top: solid 1px #d5d8e2;
+
+      @include mq(md) {
+        width: 50%;
+        padding-top: 116px;
+      }
+
+      @include mq(xl) {
+        width: 512px;
+        flex-shrink: 0;
+      }
+    }
+
+    &-note {
+      font-family: $fontsStyle;
+      font-weight: bold;
+      font-style: italic;
+      line-height: 1.18;
+      color: #0b063e;
+      font-size: 24px;
+      margin-bottom: em(20, 38);
+      @include mq(md) {
+      }
+      @include mq(lg) {
+        font-size: 30px;
+      }
+      @include mq(xl) {
+        font-size: 38px;
+      }
+    }
+
+    &-user {
+      display: flex;
+      align-items: center;
+
+      &-title {
+        font-size: 17px;
+        font-weight: 600;
+        color: #ff91cd;
+      }
+
+      &-note {
+        font-size: 13px;
+        color: #556084;
+        text-transform: uppercase;
+      }
+    }
+
+    &-ico {
+      width: 70px;
+      height: 70px;
+      vertical-align: top;
+      border-radius: 50%;
+      margin-right: 25px;
+    }
+
+    &-decor {
+      position: relative;
+      height: em(817);
+      flex-grow: 1;
+      display: none;
+      @include mq(md) {
+        display: block;
+        font-size: 10px;
+      }
+      @include mq(lg) {
+        font-size: 14px;
+      }
+      @include mq(xl) {
+        font-size: 16px;
+      }
+      img {
+        top: 0;
+        left: 0;
+        width: em(833);
+        height: em(817);
+        position: absolute;
+      }
+    }
+  }
+
+  &__info {
+    border-radius: 6px;
+    background-color: #00c4c7;
+    display: flex;
+    flex-direction: column;
+    @include mq(md) {
+      flex-direction: row;
+    }
+
+    &-cover {
+      border-radius: 6px;
+      flex-shrink: 0;
+      position: relative;
+      width: 100%;
+
+      @include mq(md) {
+        width: 59%;
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        padding-top: 62.8%;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        vertical-align: top;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 6px;
+      }
+    }
+
+    &-box {
+      flex-grow: 1;
+      color: #fff;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      @include mq(xl) {
+        padding: 30px 84px;
+      }
+    }
+
+    &-title {
+      font-family: $fontsStyle;
+      font-weight: bold;
+      line-height: 1.19;
+      margin: 0 0 36px 0;
+      font-size: 24px;
+      @include mq(md) {
+        font-size: 30px;
+      }
+      @include mq(lg) {
+        font-size: 36px;
+        margin-bottom: 40px;
+      }
+      @include mq(xl) {
+        margin-bottom: 74px;
+      }
+    }
+
+    &-note {
+      font-size: 14px;
+      line-height: 1.53;
+      @include mq(md) {
+        font-size: 19px;
+      }
+    }
+  }
+}

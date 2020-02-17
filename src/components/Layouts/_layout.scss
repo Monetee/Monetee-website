@@ -1,0 +1,24 @@
+///* layout */
+///***********************************************/
+.container {
+  @include container(xs, xl);
+}
+
+html,
+body,
+#___gatsby {
+  height: 100%;
+}
+body {
+  min-width: 320px;
+}
+#gatsby-focus-wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.content-box {
+  flex-grow: 1;
+}

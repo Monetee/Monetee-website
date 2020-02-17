@@ -1,0 +1,128 @@
+///* Button */
+///***********************************************/
+//
+//<a class="ui-btn size--normal theme--primary" href="#3" tabindex="0"><span class="ui-btn__box" tabindex="-1">Button</span></a>
+
+/* buttons */
+/***********************************************/
+.ui-btn {
+  $self: &;
+  display: inline-block;
+  overflow: visible;
+  padding: 0;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  vertical-align: top;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: none;
+  border: 0 solid;
+  outline: none;
+  background: none;
+  background-clip: border-box;
+  font-family: inherit;
+  font-size: em(16);
+  line-height: 1.2;
+  -webkit-touch-callout: none;
+  appearance: none;
+  -webkit-tap-highlight-color: rgba(#000, 0);
+
+  &:focus {
+    z-index: 100;
+    outline: none;
+  }
+
+  &__box {
+    transition: all 0.3s;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    vertical-align: top;
+    line-height: 1;
+
+    &:focus {
+      outline: none;
+    }
+
+    // SIZE MOD
+    #{$self}.size--small & {
+      font-size: em(15);
+      height: em(50, 15);
+      padding: em(1 32, 15);
+    }
+
+    #{$self}.size--normal & {
+      font-size: em(17);
+      height: em(60, 17);
+      padding: em(3 40 1 40, 17);
+      font-weight: 600;
+    }
+
+    // STATE LOADING + DISABLED
+    #{$self}.state--loading & {
+      color: transparent !important;
+
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 100%;
+        content: "";
+        opacity: 1;
+        background-image: url("data:image/gif;base64,R0lGODlhLQAHAPEAAKqnperq6b+9u9TT0iH/C05FVFNDQVBFMi4wAwEAAAAh/wtYTVAgRGF0YVhNUAE/ACH5BAUKAAAALAAAAAAtAAcAQAIfjI8Hm20LnJyP0Rqvxhvubl3eJ4bUSE7oaabNqrZSAQAh+QQFCgABACwAAAAADQAHAAACCISPqcvtD2MBACH5BAUKAAEALAAAAAAdAAcAAAIdlI8XC+3vkjQrwNumrPjqxHXPh4RiRlLMiabmWQAAIfkEBQoAAQAsAAAAAC0ABwAAAjKcjxcr7e9WALTamrKRsDd5hZSWcR4EiheZmGe0qCurMC88yRi92beQ0gF4vcDvExMCCgAh+QQFCgAAACwAAAAALQAHAAACMoyPBzvt7xYQtNqaspGwN3mFlJZxHgSKF5mYZ7SoK6swLzzJGL3Z95DSCXg9wO8TEwoKACH5BAUKAAAALBAAAAAdAAcAAAIdjI8HO+3vkjQLwNumrPjqxHXPh4RiRlLMiabmWQAAOw==");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+      }
+    }
+
+    #{$self}.state--disabled &,
+    #{$self}.state--loading & {
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    // THEME MOD 1
+    #{$self}.theme--primary & {
+      color: #fff;
+      background-color: #01c4c7;
+      font-weight: 500;
+      border-radius: 200px;
+      box-shadow: -4px 3px 14px 0 rgba(0, 196, 199, 0.46);
+
+      &:hover {
+        background-color: darken(#01c4c7, 5%);
+      }
+
+      &:active {
+        background-color: darken(#01c4c7, 15%);
+      }
+    }
+
+    #{$self}.theme--primary#{$self}:focus & {
+      box-shadow: 0 0 2px 2px #02a9f4;
+    }
+
+    // THEME MOD 1 + STATES
+    #{$self}.theme--primary.state--disabled & {
+      background-color: rgba(#000, 0.2);
+    }
+
+    #{$self}.theme--primary.state--loading & {
+      background-color: rgba(#01c4c7, 0.8);
+    }
+
+    #{$self}.theme--primary.state--disabled:focus &,
+    #{$self}.theme--primary.state--loading:focus & {
+      box-shadow: none;
+    }
+  }
+
+  /* buttons block */
+  &.is--block {
+    width: 100%;
+  }
+}
