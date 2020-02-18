@@ -19,7 +19,7 @@ const Features = () => {
             <ul className="features__list">
               <li className="features__item">
                 <h4 className="features__item-title">
-                  <span>
+                  <span data-descr="The only fully comprehensive solution">
                     The only fully comprehensive solution
                   </span>
                 </h4>
@@ -30,7 +30,7 @@ const Features = () => {
               </li>
               <li className="features__item">
                 <h4 className="features__item-title">
-                  <span>
+                  <span data-descr="No change to your payroll process">
                     No change to your payroll process
                   </span>
                 </h4>
@@ -40,7 +40,7 @@ const Features = () => {
               </li>
               <li className="features__item">
                 <h4 className="features__item-title">
-                  <span>
+                  <span data-descr="Available to 100% of your workforce">
                     Available to 100% of your workforce
                   </span>
                 </h4>
