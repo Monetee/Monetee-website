@@ -6,7 +6,9 @@ const Features = () => {
     <section className="features">
       <div className="features__box">
         <div className="features__box-decor1">
-          <img src={`images/card@2x.jpg`} alt="img"/>
+          <div className="features__box-decor1-in">
+            <img src={`images/card@2x.jpg`} alt="img"/>
+          </div>
         </div>
         <div className="features__box-decor2">
           <img src={`images/decor@2x.png`} alt="img"/>
