@@ -8,7 +8,7 @@ const Vision = () => {
 
         <div className="vision__row">
           <div className="vision__decision">
-            <h4>Our Vision statement</h4>
+            <h4 className="section-title">Our Vision statement</h4>
 
             <div className="vision__decision-note">
               A world where people have access to make sophisticated, informed,

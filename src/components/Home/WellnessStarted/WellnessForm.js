@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import "./_wellnessForm.scss"
+import axios from "axios"
 
 import { Formik, Form, Field } from "formik"
 import * as Yup from "yup"
@@ -23,6 +24,15 @@ class WellnessForm extends Component {
       buttonClasses.push("is-loading")
     }
 
+    // encode form data
+    const encode = data => {
+      return Object.keys(data)
+        .map(
+          key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+        )
+        .join("&")
+    }
+
     return (
       <Formik
         initialValues={{
@@ -31,26 +41,50 @@ class WellnessForm extends Component {
         validationSchema={WellnessFormSchema}
         onSubmit={values => {
           this.setState({ formIsSending: true })
-          // same shape as initial values
-          // console.log(values)
+          axios
+            .post(
+              "/",
+              encode({ "form-name": "New user email", ...values }),
+              {
+                headers: {
+                  "Content-Type": "application/x-www-form-urlencoded",
+                },
+              }
+            )
+            .then(response => {
+              console.log(response)
+            })
+            .catch(err => {
+              console.log(err);
+            })
+            .finally(() => {
+              this.setState({ formIsSending: false })
+            })
         }}
       >
         {({ errors, touched }) => (
           <Form className="form wellness-form" autoComplete={"off"} noValidate>
             <fieldset className="form__fieldset">
               <legend className="hidden">Wellness Form</legend>
+              <input type="hidden" name="form-name" value="contact" />
               <div className="form__box wellness-form__box">
                 <div className="form__field-control">
                   <Field
                     name="email"
                     type="email"
-                    className={`ui-input  size--normal ${this.props.themeBorder?'theme--border':'theme--default'} ${errors.email && touched.email? 'state--error':''}`}
+                    className={`ui-input  size--normal ${
+                      this.props.themeBorder
+                        ? "theme--border"
+                        : "theme--default"
+                    } ${errors.email && touched.email ? "state--error" : ""}`}
                     placeholder="Your email address"
                   />
                   <div className="form__field-messages">
                     {errors.email && touched.email ? (
-                      <div className="form__field-messages-item">{errors.email}</div>
-                      ) : null}
+                      <div className="form__field-messages-item">
+                        {errors.email}
+                      </div>
+                    ) : null}
                   </div>
                 </div>
                 <button

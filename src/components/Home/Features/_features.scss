@@ -135,6 +135,7 @@
       color: #fff;
       margin: 0 0 em(24, 26) -4px;
       position: relative;
+      letter-spacing: normal;
 
       span {
         display: inline;
@@ -143,12 +144,15 @@
         box-shadow: -4px 0 0 #00c4c7, 4px 0 0 #00c4c7;
         box-decoration-break: clone;
         color: transparent;
+        letter-spacing: normal;
 
         &:after {
+          padding: 0 4px;
           color: #fff;
           content: attr(data-descr);
           position: absolute;
-          left: .1em;
+          letter-spacing: normal;
+          left: 0;
           top: 0;
           z-index: 10;
           width: 100%;

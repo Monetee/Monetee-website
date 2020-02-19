@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Aleksandr Zidyganov <alex@csscoder.pro>",
   "dependencies": {
+    "axios": "0.19.2",
     "formik": "2.1.4",
     "gatsby": "2.19.7",
     "gatsby-plugin-manifest": "2.2.39",

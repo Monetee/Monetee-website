@@ -7,7 +7,7 @@ const Members = () => {
       <div className="container">
         <div className="members__box">
           <div className="members__box-info">
-            <h4>People are More Than Numbers</h4>
+            <h4 className="section-title">People are More Than Numbers</h4>
 
             <div className="members__box-note">
               Employees are a company's greatest asset - they're your competitive advantage. You want to attract and retain the best; provide them with encouragement, stimulus, and make them feel that they are an integral part of the company's mission.
