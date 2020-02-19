@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import "./_wellnessForm.scss"
 import axios from "axios"
+import { store as storeNotify } from "react-notifications-component"
 
 import { Formik, Form, Field } from "formik"
 import * as Yup from "yup"
@@ -14,6 +15,8 @@ const WellnessFormSchema = Yup.object().shape({
 class WellnessForm extends Component {
   state = {
     formIsSending: false,
+    formIsSent: false,
+    formName: "New user email",
   }
 
   render() {
@@ -39,12 +42,15 @@ class WellnessForm extends Component {
           email: "",
         }}
         validationSchema={WellnessFormSchema}
-        onSubmit={values => {
+        onSubmit={(values, { resetForm }) => {
+
+          // if(!this.state.formIsSending) return;
+
           this.setState({ formIsSending: true })
           axios
             .post(
               "/",
-              encode({ "form-name": "New user email", ...values }),
+              encode({ "form-name": this.state.formName, ...values }),
               {
                 headers: {
                   "Content-Type": "application/x-www-form-urlencoded",
@@ -52,10 +58,42 @@ class WellnessForm extends Component {
               }
             )
             .then(response => {
-              console.log(response)
+              // console.log(response)
+              storeNotify.addNotification({
+                title: "Thank you!",
+                message: "We got your Email",
+                type: "success",
+                insert: "top",
+                container: "top-right",
+                animationIn: ["animated", "fadeIn"],
+                animationOut: ["animated", "fadeOut"],
+                dismiss: {
+                  delay: 500,
+                  duration: 5000,
+                  onScreen: true,
+                  pauseOnHover: true,
+                },
+              })
+              resetForm()
+              this.setState({ formIsSent: true })
             })
             .catch(err => {
-              console.log(err);
+              console.log(err)
+              storeNotify.addNotification({
+                title: "Error!",
+                message: "Server error, try later.",
+                type: "error",
+                insert: "top",
+                container: "top-right",
+                animationIn: ["animated", "fadeIn"],
+                animationOut: ["animated", "fadeOut"],
+                dismiss: {
+                  delay: 500,
+                  duration: 5000,
+                  onScreen: true,
+                  pauseOnHover: true,
+                },
+              })
             })
             .finally(() => {
               this.setState({ formIsSending: false })
@@ -63,10 +101,16 @@ class WellnessForm extends Component {
         }}
       >
         {({ errors, touched }) => (
-          <Form className="form wellness-form" autoComplete={"off"} noValidate>
+          <Form
+            className="form wellness-form"
+            autoComplete={"off"}
+            noValidate
+            data-netlify="true"
+            name={this.state.formName}
+          >
             <fieldset className="form__fieldset">
               <legend className="hidden">Wellness Form</legend>
-              <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="form-name" value="New user email" />
               <div className="form__box wellness-form__box">
                 <div className="form__field-control">
                   <Field
@@ -78,6 +122,7 @@ class WellnessForm extends Component {
                         : "theme--default"
                     } ${errors.email && touched.email ? "state--error" : ""}`}
                     placeholder="Your email address"
+                    disabled={`${this.state.formIsSending || this.state.formIsSent ? "disabled" : ""}`}
                   />
                   <div className="form__field-messages">
                     {errors.email && touched.email ? (
@@ -90,10 +135,10 @@ class WellnessForm extends Component {
                 <button
                   className={`ui-btn size--normal theme--primary ${
                     this.state.formIsSending ? "state--loading" : ""
-                  }`}
+                  } ${this.state.formIsSent ? "state--disabled" : ""}`}
                   type="submit"
                   tabIndex="0"
-                  disabled={`${this.state.formIsSending ? "disabled" : ""}`}
+                  disabled={`${this.state.formIsSending || this.state.formIsSent ? "disabled" : ""}`}
                 >
                   <span className="ui-btn__box" tabIndex="-1">
                     {this.props.btnLabel}

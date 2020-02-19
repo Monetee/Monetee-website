@@ -115,3 +115,9 @@ a {
     outline: none;
   }
 }
+
+// common animation animate.css
+$use-fadeIn: true;
+$use-fadeOut: true;
+$base-duration: .5s;
+@import "~animate-sass/animate";

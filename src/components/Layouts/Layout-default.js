@@ -7,11 +7,13 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+import ReactNotification from "react-notifications-component"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
-import './_layout.scss'
+import "./_layout.scss"
+import "react-notifications-component/dist/scss/notification.scss"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,13 +28,13 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <ReactNotification />
       <Header siteTitle={data.site.siteMetadata.title} />
       <main className="content-box">{children}</main>
       <Footer />
     </>
   )
 }
-
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

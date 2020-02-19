@@ -108,11 +108,12 @@
 
     // THEME MOD 1 + STATES
     #{$self}.theme--primary.state--disabled & {
-      background-color: rgba(#000, 0.2);
+      background-color: #d2d2d2;
+      box-shadow: none;
     }
 
     #{$self}.theme--primary.state--loading & {
-      background-color: rgba(#01c4c7, 0.8);
+      box-shadow: none;
     }
 
     #{$self}.theme--primary.state--disabled:focus &,
