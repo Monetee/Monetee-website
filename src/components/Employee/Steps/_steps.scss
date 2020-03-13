@@ -1,0 +1,131 @@
+///* Steps */
+///***********************************************/
+.steps-emp {
+  $self: &;
+
+  padding: 95px 0 80px 0;
+
+  @include mq(md) {
+    padding: 130px 0 110px 0;
+  }
+
+  @include mq(lg) {
+    padding: 190px 0 170px 0;
+  }
+
+  &__title {
+    font-family: $fontsStyle;
+    font-size: 36px;
+    font-weight: bold;
+    color: #1c2139;
+    text-align: center;
+  }
+
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @include mq(md) {
+      flex-direction: row;
+      margin-bottom: 34px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0 0 0;
+
+    @include mq(md) {
+      @include col(6, 4);
+      margin: 0;
+    }
+
+    @include mq(xl) {
+      @include col(6, 4, 120px);
+      margin: 0;
+    }
+
+    &-num {
+      font-size: 30px;
+      font-weight: bold;
+      line-height: em(60, 30);
+      color: #533dc6;
+      text-align: center;
+      position: relative;
+      width: em(70, 30);
+      height: em(70, 30);
+      margin-bottom: 25px;
+      box-shadow: inset 0 0 0 1px #c3c7d7, 0 0 0 1px #e0e2ea;
+      border: 8px solid #fff;
+      border-radius: 50%;
+      background-color: #fff;
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: em(120, 30);
+        height: em(120, 30);
+        content: '';
+        box-shadow: inset 0 0 0 1px #f5f5f8, inset 0 0 0 9px #fff;
+        transform: translateX(-50%) translateY(-50%);
+        border: 15px solid #fff;
+        border-radius: 50%;
+      }
+
+      &:after {
+        font-size: 0;
+        line-height: 0;
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        display: none;
+        content: '';
+        border-top: 1px dashed #dcdee7;
+        @include mq(md) {
+          display: block;
+          width: 200px;
+        }
+        @include mq(lg) {
+          width: 300px;
+        }
+        @include mq(xl) {
+          width: 350px;
+        }
+      }
+    }
+
+    &-note {
+      font-family: $fontsStyle;
+      font-size: em(21px);
+      font-weight: bold;
+      color: #1c2139;
+      text-align: center;
+      margin: em(0 0 20 0, 28);
+    }
+
+    &:last-child {
+      #{$self}__item-num {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+
+
+  &__note {
+    font-size: 13px;
+    color: #8891b0;
+    text-align: center;
+    letter-spacing: 2.81px;
+    text-transform: uppercase;
+  }
+
+}
