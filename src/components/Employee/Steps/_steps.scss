@@ -2,23 +2,23 @@
 ///***********************************************/
 .steps-emp {
   $self: &;
-
-  padding: 95px 0 80px 0;
-
-  @include mq(md) {
-    padding: 130px 0 110px 0;
-  }
+  padding: 40px 0;
 
   @include mq(lg) {
-    padding: 190px 0 170px 0;
+    padding: 60px 0;
   }
 
   &__title {
     font-family: $fontsStyle;
-    font-size: 36px;
+    font-size: 26px;
     font-weight: bold;
     color: #1c2139;
     text-align: center;
+    margin: 0 0 30px 0;
+    @include mq(md) {
+      font-size: 36px;
+      margin: 0 0 50px 0;
+    }
   }
 
 
@@ -30,7 +30,7 @@
     list-style: none;
     @include mq(md) {
       flex-direction: row;
-      margin-bottom: 34px;
+      margin-bottom: 30px;
     }
   }
 
@@ -39,7 +39,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 40px 0 0 0;
+    margin: 30px 0 0 0;
+    &:first-child {
+      margin-top: 0;
+    }
 
     @include mq(md) {
       @include col(6, 4);
@@ -54,24 +57,27 @@
     &-num {
       font-size: 30px;
       font-weight: bold;
-      line-height: em(60, 30);
+      line-height: em(75, 30);
       color: #533dc6;
       text-align: center;
       position: relative;
-      width: em(70, 30);
-      height: em(70, 30);
-      margin-bottom: 25px;
+      width: em(82, 30);
+      height: em(82, 30);
       box-shadow: inset 0 0 0 1px #c3c7d7, 0 0 0 1px #e0e2ea;
       border: 8px solid #fff;
       border-radius: 50%;
       background-color: #fff;
+      margin-bottom: 15px;
+      @include mq(md) {
+        margin-bottom: 25px;
+      }
 
       &:before {
         position: absolute;
         top: 50%;
         left: 50%;
-        width: em(120, 30);
-        height: em(120, 30);
+        width: em(134, 30);
+        height: em(134, 30);
         content: '';
         box-shadow: inset 0 0 0 1px #f5f5f8, inset 0 0 0 9px #fff;
         transform: translateX(-50%) translateY(-50%);
@@ -87,7 +93,12 @@
         top: 50%;
         display: none;
         content: '';
-        border-top: 1px dashed #dcdee7;
+        background-image: linear-gradient(to right, #c3c7d7 50%, rgba(255,255,255,0) 0%);
+        background-position: bottom;
+        background-size: 20px 1px;
+        background-repeat: repeat-x;
+        height: 1px;
+
         @include mq(md) {
           display: block;
           width: 200px;

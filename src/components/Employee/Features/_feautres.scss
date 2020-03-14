@@ -1,0 +1,73 @@
+///* features-emp */
+///***********************************************/
+.features-emp {
+  $self: &;
+  position: relative;
+  padding: 30px 0;
+
+  @include mq(md) {
+    padding: 60px 0;
+  }
+
+
+  &__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    @include mq(md) {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    margin: 40px 0 0 0;
+    position: relative;
+    padding-top: 20px;
+    &:first-child {
+      margin-top: 0;
+    }
+
+    @include mq(md) {
+      @include col(8, 3, 40);
+      margin: 0;
+    }
+
+    @include mq(xl) {
+      @include col(8, 3, 120);
+      margin: 0;
+    }
+
+    &-top {
+      font-size: 13px;
+      color: #939CB8;
+      letter-spacing: 2.81px;
+      line-height: 31px;
+    }
+
+    &-num {
+      font-weight: bold;
+      font-size: 45px;
+      color: #533DC6;
+      letter-spacing: 0;
+      @include mq(lg) {
+        font-size: 65px;
+      }
+
+      sup {
+        font-size: em(33px, 65);
+        line-height: 1;
+        top: -.7em;
+      }
+    }
+
+    &-note {
+      font-size: 17px;
+      line-height: 1.59;
+      color: #515c81;
+    }
+  }
+
+
+}

@@ -1,36 +1,53 @@
 ///* Hero */
 ///***********************************************/
-.hero-employee {
+.promo-emp {
   $self: &;
-  position: relative;
-
 
   &__box {
     display: flex;
     justify-content: center;
+    padding-bottom: 30px;
+    flex-direction: column;
+    @include mq(md) {
+      flex-direction: row;
+    }
+    @include mq(lg) {
+      align-items: center;
+      padding-bottom: 60px;
+    }
 
     &-main {
-      padding-top: 45px;
       position: relative;
       z-index: 1;
       @include mq(md) {
-        width: 60%;
+        @include col(10, 2);
       }
       @include mq(xl) {
-        padding-top: 200px;
-        width: 700px;
         flex-shrink: 0;
       }
     }
 
     &-decor {
-      position: absolute;
-      right: 0;
+      position: relative;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      @include mq(md) {
+        @include col(14, 2);
+      }
 
-      display: none;
-      font-size: 10px;
+      font-size: 6px;
+      @include mq(sm) {
+        font-size: 10px;
+      }
       @include mq(md) {
         display: block;
+        font-size: 13px;
+        &:before {
+          content: '';
+          display: block;
+          padding-top: 106%;
+        }
       }
       @include mq(lg) {
         font-size: 13px;
@@ -38,16 +55,55 @@
       @include mq(xl) {
         font-size: 16px;
       }
-      top: -100px;
-      z-index: -1;
-      width: em(706);
-      height: em(696);
+
 
       .gatsby-image-wrapper {
-        height: 100%;
+        @include mq(md) {
+          position: absolute !important;
+        }
+        top: 0;
+        width: em(779);
+        height: em(827);
+        z-index: -1;
+        @include mq(md) {
+          right: 60px;
+        }
+      }
+    }
+
+
+    &-item {
+      margin-top: 20px;
+      &:first-child {
+        margin-top: 0;
+      }
+      @include mq(md) {
+        margin-top: 40px;
+      }
+
+    }
+    &-title {
+      font-family: $fontsStyle;
+      font-weight: bold;
+      font-size: 28px;
+      color: #1E2540;
+      margin: 0 0 em(30px, 36) 0;
+      @include mq(md) {
+        font-size: 36px;
+      }
+    }
+    &-note {
+      font-size: 16px;
+      color: #515C81;
+      letter-spacing: 0;
+      line-height: em(31px, 19);
+      @include mq(md) {
+        font-size: 19px;
       }
     }
   }
+
+
 
   &__title {
     font-family: $fontsStyle;
