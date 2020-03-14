@@ -1,0 +1,59 @@
+///* integration */
+///***********************************************/
+.integration {
+  $self: &;
+  padding: 0 15px;
+  margin-bottom: 40px;
+  @include mq(lg) {
+    padding: 0 25px;
+    margin-bottom: 60px;
+  }
+
+  &__box {
+    background-color: #7652e8;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 30px 0;
+    position: relative;
+    max-width: 1650px;
+    margin: 0 auto;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include mq(md) {
+      padding: 120px 0;
+      background-position: calc(100% + 450px) 50%;
+      background-image: url("/images/Employer/integration.jpg");
+    }
+    @include mq(lg) {
+      background-position: calc(100% + 250px) 50%;
+    }
+    @include mq(xl) {
+      background-position: 100% 50%;
+    }
+  }
+
+  &__title {
+    font-family: $fontsStyle;
+    font-size: 34px;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: em(49px, 44);
+    margin: 0 0  em(57, 44) 0;
+    @include mq(lg) {
+      font-size: 44px;
+    }
+  }
+
+  &__note {
+    font-size: 17px;
+    color: #fff;
+    letter-spacing: 0;
+    line-height: 27px;
+  }
+
+  &__content {
+    max-width: 460px;
+  }
+}

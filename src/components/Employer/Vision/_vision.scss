@@ -1,0 +1,166 @@
+///* vision */
+///***********************************************/
+.vision-emp {
+  $self: &;
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    @include mq(lg) {
+      flex-direction: row;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__decision {
+    margin-bottom: 40px;
+    @include mq(lg) {
+      margin-bottom: 0;
+      @include col(13, 2, 110px);
+    }
+
+    &-box {
+      margin-bottom: 20px;
+      @include mq(lg) {
+        margin-bottom: 100px;
+      }
+    }
+
+    &-decor {
+      position: relative;
+      height: em(785);
+      font-size: 10px;
+      @include mq(md) {
+        font-size: 12px;
+      }
+      @include mq(lg) {
+        font-size: 16px;
+      }
+      img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: em(770);
+        height: em(788);
+        z-index: 1;
+      }
+
+    }
+
+    &-note {
+      font-family: $fontsStyle;
+      font-size: 36px;
+      font-weight: bold;
+      font-style: italic;
+      line-height: 1.2;
+      color: #0b063e;
+      position: relative;
+      z-index: 10;
+      margin-bottom: 10px;
+      @include mq(md) {
+        font-size: 40px;
+      }
+      @include mq(lg) {
+        font-size: 46px;
+      }
+      @include mq(xl) {
+        font-size: 56px;
+      }
+    }
+
+    &-info {
+      font-size: 13px;
+      color: #939CB8;
+      letter-spacing: 2.81px;
+      line-height: 31px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__employer {
+    border-top: 1px solid #d5d8e2;
+    padding-top: 30px;
+
+    @include mq(lg) {
+      @include col(11, 2, 110px);
+      padding-top: 50px;
+    }
+
+
+
+    &-box {
+      background-color: #7751e2;
+      padding: em(20 30px 80 30px);
+      border-radius: 6px;
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+      @include mq(md) {
+        margin-bottom: 40px;
+      }
+      @include mq(xl) {
+        padding: em(25 66px 80 66px);
+        margin-bottom: 100px;
+      }
+
+      &-title {
+        font-family: $fontsStyle;
+        font-size: em(36px);
+        font-weight: bold;
+        line-height: 1.31;
+        color: #fff;
+        margin: em(0 0 30 0, 36);
+      }
+
+      &-decor {
+        display: block;
+        margin: -15px -66px 0 -66px;
+        img {
+          width: 100%;
+          vertical-align: top;
+        }
+      }
+
+      &-info {
+        font-family: $fontsStyle;
+        font-weight: bold;
+        color: #fff;
+        z-index: 10;
+        position: relative;
+        font-size: 27px;
+        letter-spacing: 0;
+        line-height: 37px;
+        font-style: italic;
+      }
+
+      &-sub {
+        font-size: 13px;
+        color: #B3ACDC;
+        letter-spacing: 2.81px;
+        line-height: 31px;
+        text-transform: uppercase;
+      }
+
+    }
+
+    &-info {
+
+      &-title {
+        font-size: 36px;
+        color: #1E2540;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 47px;
+        margin: 0;
+      }
+      &-note {
+        font-size: 19px;
+        color: #515C81;
+        letter-spacing: 0;
+        line-height: 31px;
+      }
+    }
+
+  }
+}

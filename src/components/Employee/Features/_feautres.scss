@@ -1,15 +1,12 @@
-///* steps */
+///* features-emp */
 ///***********************************************/
-.steps {
+.features-emp {
   $self: &;
-  padding: 95px 0 80px 0;
+  position: relative;
+  padding: 30px 0;
 
   @include mq(md) {
-    padding: 130px 0 110px 0;
-  }
-
-  @include mq(lg) {
-    padding: 190px 0 170px 0;
+    padding: 60px 0;
   }
 
 
@@ -33,37 +30,42 @@
     }
 
     @include mq(md) {
-      @include col(8, 3);
+      @include col(8, 3, 40);
       margin: 0;
     }
 
-    &-num {
-      font-family: $fontsStyle;
-      font-size: 52px;
-      font-weight: bold;
-      color: #ffe9f5;
-      position: absolute;
-      top: 0;
-      line-height: 1;
-      left: 0;
-      z-index: -1;
+    @include mq(xl) {
+      @include col(8, 3, 120);
+      margin: 0;
     }
 
-    &-title {
-      font-family: $fontsStyle;
-      font-size: em(28px);
+    &-top {
+      font-size: 13px;
+      color: #939CB8;
+      letter-spacing: 2.81px;
+      line-height: 31px;
+    }
+
+    &-num {
       font-weight: bold;
-      color: #1e2540;
-      margin: em(0 0 20 0, 28);
+      font-size: 45px;
+      color: #533DC6;
+      letter-spacing: 0;
+      @include mq(lg) {
+        font-size: 65px;
+      }
+
+      sup {
+        font-size: em(33px, 65);
+        line-height: 1;
+        top: -.7em;
+      }
     }
 
     &-note {
       font-size: 17px;
       line-height: 1.59;
       color: #515c81;
-      a {
-        color: #533dc6;
-      }
     }
   }
 

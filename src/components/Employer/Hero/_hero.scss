@@ -1,0 +1,104 @@
+///* Hero */
+///***********************************************/
+.hero-employer {
+  $self: &;
+  position: relative;
+
+
+  &__box {
+    display: flex;
+    justify-content: center;
+
+    &-main {
+      padding-top: 45px;
+      position: relative;
+      z-index: 1;
+      @include mq(md) {
+        width: 60%;
+      }
+      @include mq(xl) {
+        padding-top: 200px;
+        width: 700px;
+        flex-shrink: 0;
+      }
+    }
+
+    &-decor {
+      position: absolute;
+      right: 0;
+
+      display: none;
+      font-size: 10px;
+      @include mq(md) {
+        display: block;
+      }
+      @include mq(lg) {
+        font-size: 13px;
+      }
+      @include mq(xl) {
+        font-size: 16px;
+      }
+      top: -100px;
+      z-index: -1;
+      width: em(706);
+      height: em(696);
+
+      .gatsby-image-wrapper {
+        height: 100%;
+      }
+    }
+  }
+
+  &__title {
+    font-family: $fontsStyle;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.13;
+    color: #0b063e;
+    margin: em(0 0 52 0, 56);
+    text-align: center;
+
+    @include mq(lg) {
+      font-size: 46px;
+    }
+
+    @include mq(xl) {
+      font-size: 56px;
+    }
+
+    b {
+      display: inline-block;
+      white-space: nowrap;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: em(18, 56);
+        left: -0.1em;
+        right: -0.1em;
+        background-color: #00c6c8;
+        z-index: -1;
+        line-height: 0;
+      }
+    }
+  }
+
+  &__note {
+    font-size: em(16px);
+    line-height: 1.65;
+    color: #4a4860;
+    margin: 0 auto em(58, 17) auto;
+    text-align: center;
+    max-width: 320px;
+    @include mq(md) {
+      max-width: 560px;
+      font-size: em(18px);
+    }
+    @include mq(lg) {
+      font-size: em(21px);
+      max-width: 820px;
+    }
+  }
+}

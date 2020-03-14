@@ -16,18 +16,27 @@
     }
 
     &-info {
-      margin-right: 30px;
+
       padding-top: 60px;
       border-top: solid 1px #d5d8e2;
+      @include mq(md) {
+        margin-right: 30px;
+      }
+
+      &--s2 {
+        @include mq(xl) {
+          margin-top: 100px;
+        }
+      }
 
       @include mq(md) {
         width: 50%;
         padding-top: 116px;
+        flex-shrink: 0;
       }
 
-      @include mq(xl) {
-        width: 512px;
-        flex-shrink: 0;
+      &-in {
+        max-width: 512px;
       }
     }
 
@@ -89,11 +98,30 @@
       @include mq(xl) {
         font-size: 16px;
       }
+
+      &--s1 {
+        img {
+          width: em(833);
+          height: em(817);
+        }
+      }
+
+      &--s2 {
+        img {
+          width: em(714);
+          height: em(824);
+        }
+      }
+      &--s3 {
+        img {
+          width: em(727);
+          height: em(817);
+        }
+      }
+
       img {
         top: 0;
         left: 0;
-        width: em(833);
-        height: em(817);
         position: absolute;
       }
     }
