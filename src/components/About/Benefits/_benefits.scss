@@ -1,0 +1,71 @@
+///* benefits */
+///***********************************************/
+.about-benefits {
+  $self: &;
+
+  &__box {
+    margin: 50px auto 20px auto;
+    max-width: 790px;
+    @include mq(lg) {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    color: #1e2540;
+    font-size: 24px;
+    margin: 0 0 em(11, 36) 0;
+    font-weight: bold;
+    font-family: $fontsStyle;
+    @include mq(lg) {
+      font-size: 36px;
+    }
+  }
+
+  &__note {
+    font-size: 21px;
+    color: #4a4860;
+    text-align: center;
+    margin-bottom: em(46, 21);
+  }
+
+  &__list {
+    margin-bottom: 22px;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 55px;
+    margin-top: 27px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &-num {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      color: #533dc6;
+      font-size: 31px;
+      line-height: 1;
+      font-family: $fontsStyle;
+    }
+
+    &-note {
+      color: #515c81;
+      font-size: 17px;
+    }
+  }
+
+  &__footer {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #939cb8;
+    letter-spacing: 2.81px;
+    padding-left: 55px;
+  }
+
+}
