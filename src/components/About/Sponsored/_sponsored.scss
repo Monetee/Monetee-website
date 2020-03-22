@@ -3,19 +3,110 @@
 .about-sponsored {
   $self: &;
 
-  &__box {
-    margin: 60px 0;
-    background-color: #7751e2;
-    border-radius: 6px;
-    position: relative;
-    display: flex;
-    overflow: hidden;
-    align-items: center;
-    flex-direction: column;
+  $self: &;
+  padding: 0 15px;
+  margin-bottom: 40px;
+  @include mq(lg) {
+    padding: 0 25px;
+    margin-bottom: 60px;
+  }
 
+  &__box {
+    background-color: #7652e8;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 30px 0;
+    position: relative;
+    max-width: 1650px;
+    margin: 0 auto;
+
+    background-repeat: no-repeat;
+    background-size: contain;
     @include mq(md) {
-      flex-direction: row;
+      padding: 60px 0;
+    }
+    @include mq(lg) {
+      padding: 80px 0;
+      background-image: url("/images/About/sponsored.jpg");
+      background-size: auto 300px;
+
+      background-position: -10px 0%;
+    }
+    @include mq(xl) {
+      padding: 120px 0;
+      background-size: auto 600px;
+      background-position: calc(50% - 550px) 50%;
+    }
+  }
+
+  &__note {
+    @include mq(lg) {
+      padding-left: 230px;
+    }
+    @include mq(xl) {
+      padding-left: 320px;
+    }
+    color: #fff;
+  }
+
+  &__title {
+    font-size: 30px;
+    margin: em(0 0 20 0, 40);
+    font-family: $fontsStyle;
+
+    @include mq(xl) {
+      font-size: 40px;
+    }
+  }
+
+  &__info {
+    font-size: 18px;
+    line-height: em(34, 21);
+    margin-bottom: em(40, 21);
+    @include mq(xl) {
+      font-size: 21px;
+    }
+  }
+
+  &__list {
+    border-top: 1px solid #633cd9;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    @include mq(md) {
+      display: flex;
     }
 
+    &-item {
+      @include mq(md) {
+        @include col(1, 2, 30px, 2);
+      }
+    }
+
+    &-title {
+      font-size: 20px;
+      font-weight: bold;
+      font-family: $fontsStyle;
+      margin-bottom: em(30, 27);
+      @include mq(lg) {
+        font-size: 27px;
+      }
+    }
+
+    &-note {
+      font-size: 16px;
+      @include mq(lg) {
+        font-size: 19px;
+      }
+      line-height: em(29,19);
+    }
   }
+
+  &__footer {
+
+    color: #b5a3ec;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2.8px;
+  }
+
 }

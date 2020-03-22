@@ -41,7 +41,7 @@
     "gatsby"
   ],
   "engines": {
-    "node": "=13.5.0 <=13.8.0"
+    "node": ">=13.5.0 <=13.11.0"
   },
   "license": "MIT",
   "scripts": {

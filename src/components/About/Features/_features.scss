@@ -1,0 +1,44 @@
+///* features */
+///***********************************************/
+.about-features {
+  $self: &;
+  margin-bottom: 54px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-bottom: 60px;
+    @include mq(md) {
+      @include col(1, 2, 80, 2);
+    }
+    @include mq(xl) {
+      @include col(1, 2, 240, 2);
+    }
+    border-top: 1px solid #d5d8e2;
+    padding-top: 30px;
+    @include mq(lg) {
+      padding-top: 86px;
+    }
+
+    &-top {
+      text-transform: uppercase;
+      color: #939cb8;
+      font-size: 13px;
+      margin-bottom: em(30, 13);
+      letter-spacing: em(2.81px, 13);
+    }
+
+    &-note {
+      color: #0b063e;
+      font-family: $fontsStyle;
+      line-height: em(45px, 38);
+      font-size: 28px;
+      @include mq(lg) {
+        font-size: 38px;
+      }
+    }
+  }
+}
