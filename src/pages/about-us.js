@@ -3,14 +3,16 @@ import { Link } from "gatsby"
 
 import Layout from "../components/Layouts/Layout-default"
 import SEO from "../components/seo"
+import Hero from "../components/About/Hero/Hero"
+import WellnessStarted from "../components/Home/WellnessStarted/WellnessStarted"
+import Sponsored from "../components/About/Sponsored/Sponsored"
 
 const AboutUsPage = () => (
   <Layout>
     <SEO title="AboutUs" />
-    <div className="container">
-      <h1>About Us page</h1>
-      <Link to="/">Go back to the homepage</Link>
-    </div>
+    <Hero />
+    <Sponsored />
+    <WellnessStarted/>
   </Layout>
 )
 

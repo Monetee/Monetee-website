@@ -1,0 +1,21 @@
+///* sponsored */
+///***********************************************/
+.about-sponsored {
+  $self: &;
+
+  &__box {
+    margin: 60px 0;
+    background-color: #7751e2;
+    border-radius: 6px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    flex-direction: column;
+
+    @include mq(md) {
+      flex-direction: row;
+    }
+
+  }
+}
