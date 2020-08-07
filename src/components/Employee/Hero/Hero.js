@@ -7,7 +7,7 @@ const Hero = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "top-employee.png" }) {
+      placeholderImage: file(relativePath: { eq: "Employee/top@2x.jpg" }) {
         childImageSharp {
           fixed(quality: 80, width: 706) {
             ...GatsbyImageSharpFixed_noBase64
