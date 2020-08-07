@@ -1,6 +1,6 @@
 ///* advantage */
 ///***********************************************/
-.advantage {
+.advantage-employee {
   $self: &;
 
   &__title {
@@ -69,7 +69,7 @@
     }
 
     &-note {
-      font-size: 15px;
+      font-size: 17px;
       line-height: 26px;
       color: #515c81;
       text-align: center;
@@ -101,9 +101,7 @@
     }
 
     &:nth-child(1) {
-      img {
-        width: 7.3125em;
-      }
+
 
       &:before {
         z-index: -2;
@@ -113,16 +111,12 @@
       }
     }
 
-    &:nth-child(2) {
-      img {
-        width: 7.3125em;
-      }
-    }
+    //&:nth-child(2) {
+    //
+    //}
 
     &:nth-child(3) {
-      img {
-        width: 7.625em;
-      }
+
 
       &:before {
         z-index: -2;

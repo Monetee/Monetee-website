@@ -11,21 +11,21 @@ const Members = () => {
         <div className="advantage__list">
           <div className="advantage__item">
             <div className="advantage__item-ico">
-              <img src={"/images/Employer/ico1.png"} alt="img"/>
+              <img src={"/images/Employer/icon/i1.svg"} alt="img"/>
             </div>
             <div className="advantage__item-title">Instantly Reduce Turnover</div>
             <div className="advantage__item-note">Turnover costs are crazy. Reduce emloyee turnover by an average of 47%</div>
           </div>
           <div className="advantage__item">
             <div className="advantage__item-ico">
-              <img src={"/images/Employer/ico2.png"} alt="img"/>
+              <img src={"/images/Employer/icon/i2.svg"} alt="img"/>
             </div>
             <div className="advantage__item-title">Immediately Fill Open Positions</div>
             <div className="advantage__item-note">Increase your applicant pool 3x by paying employees on their first day on the job</div>
           </div>
           <div className="advantage__item">
             <div className="advantage__item-ico">
-              <img src={"/images/Employer/ico3.png"} alt="img"/>
+              <img src={"/images/Employer/icon/i3.svg"} alt="img"/>
             </div>
             <div className="advantage__item-title">Promote Financial Wellness</div>
             <div className="advantage__item-note">Help your employees pay bills on time and reduce financial stress.</div>

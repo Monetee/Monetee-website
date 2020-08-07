@@ -50,7 +50,7 @@
 
     &-note {
       font-family: $fontsStyle;
-      font-size: 36px;
+      font-size: 28px;
       font-weight: bold;
       font-style: italic;
       line-height: 1.2;
@@ -59,13 +59,10 @@
       z-index: 10;
       margin-bottom: 10px;
       @include mq(md) {
-        font-size: 40px;
+        font-size: 30px;
       }
       @include mq(lg) {
-        font-size: 46px;
-      }
-      @include mq(xl) {
-        font-size: 56px;
+        font-size: 38px;
       }
     }
 

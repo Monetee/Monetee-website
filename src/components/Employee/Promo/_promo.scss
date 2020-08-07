@@ -91,6 +91,13 @@
       @include mq(md) {
         font-size: 36px;
       }
+
+      &.is-smaller {
+        font-size: 18px;
+        @include mq(md) {
+          font-size: 21px;
+        }
+      }
     }
     &-note {
       font-size: 16px;
@@ -99,6 +106,13 @@
       line-height: em(31px, 19);
       @include mq(md) {
         font-size: 19px;
+      }
+
+      &.is-smaller {
+        font-size: 14px;
+        @include mq(md) {
+          font-size: 17px;
+        }
       }
     }
   }

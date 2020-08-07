@@ -24,8 +24,8 @@ const Vision = () => {
           <div className="vision__employer">
 
             <div className="vision__employer-calendar">
-              <img className="vision__employer-calendar-decor" src={`images/calendar@2x.jpg`}/>
-              <img className="vision__employer-calendar-decor2" src={`images/decor2.png`} srcSet={`images/decor2@2x.png 2x`}/>
+              <img className="vision__employer-calendar-decor" src={`images/calendar@2x.jpg`} alt="img"/>
+              <img className="vision__employer-calendar-decor2" src={`images/decor2.png`} srcSet={`images/decor2@2x.png 2x`} alt="img"/>
               <h3 className="vision__employer-calendar-title">Help your Employees</h3>
               <div className="vision__employer-calendar-info">
                 The Technological revolution has given us the ability to

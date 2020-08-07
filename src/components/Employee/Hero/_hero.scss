@@ -3,23 +3,25 @@
 .hero-employee {
   $self: &;
   position: relative;
+  margin-bottom: 90px;
 
 
   &__box {
     display: flex;
-    justify-content: center;
 
     &-main {
       padding-top: 45px;
       position: relative;
       z-index: 1;
-      @include mq(md) {
+      width: 100%;
+      @include mq(lg) {
         width: 60%;
       }
       @include mq(xl) {
-        padding-top: 200px;
+        padding-top: 100px;
         width: 700px;
         flex-shrink: 0;
+        min-height: 500px;
       }
     }
 
@@ -53,10 +55,17 @@
     font-family: $fontsStyle;
     font-weight: bold;
     font-size: 36px;
-    line-height: 1.13;
+    line-height: 1.4;
     color: #0b063e;
-    margin: em(0 0 52 0, 56);
+    margin: 0;
     text-align: center;
+    @include mq(md) {
+      text-align: left;
+    }
+
+    &-wrap {
+      margin-bottom: 40px;
+    }
 
     @include mq(lg) {
       font-size: 46px;
@@ -99,6 +108,46 @@
     @include mq(lg) {
       font-size: em(21px);
       max-width: 620px;
+    }
+  }
+
+  &__apps {
+
+    &-note {
+      font-size: em(13px);
+      color: #939CB8;
+      letter-spacing: em(2.81px, 13);
+      text-transform: uppercase;
+      margin-bottom: em(6, 13);
+      text-align: center;
+      @include mq(md) {
+        text-align: left;
+      }
+    }
+
+    &-list {
+      display: flex;
+      justify-content: center;
+      @include mq(md) {
+        justify-content: flex-start;
+      }
+    }
+    &-item {
+      margin-right: 3px;
+      margin-left: 3px;
+      @include mq(md) {
+        margin: 0 6px 0 0;
+      }
+    }
+  }
+
+  &__sub-title {
+    font-size: 18px;
+    color: #4a4860;
+    text-align: center;
+    @include mq(md) {
+      text-align: left;
+      font-size: 21px;
     }
   }
 }
